@@ -55,8 +55,8 @@ const Hero = ({ translations }: HeroProps) => {
                   "Software Engineering", 
                   "AI & ML"
                 ]}
-                typingSpeed={80}
-                deletingSpeed={40}
+                typingSpeed={90}
+                deletingSpeed={50}
                 pauseDuration={1500}
               />
             </div>
@@ -102,7 +102,7 @@ const Hero = ({ translations }: HeroProps) => {
 
           <div className="flex items-center justify-center gap-6 pt-4 animate-scale-in">
             <a 
-              href="https://linkedin.com/in/your-profile" 
+              href="https://www.linkedin.com/in/alvaro-calleros8" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-foreground/70 hover:text-secondary transition-colors"
@@ -110,7 +110,7 @@ const Hero = ({ translations }: HeroProps) => {
               <Linkedin className="w-6 h-6" />
             </a>
             <a 
-              href="https://github.com/your-username" 
+              href="https://github.com/Alvaro-Calleros" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-foreground/70 hover:text-secondary transition-colors"
@@ -121,11 +121,6 @@ const Hero = ({ translations }: HeroProps) => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-secondary rounded-full p-1">
-          <div className="w-1.5 h-3 bg-secondary rounded-full mx-auto animate-pulse" />
-        </div>
-      </div>
     </section>
   );
 };
