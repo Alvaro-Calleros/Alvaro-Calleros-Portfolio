@@ -47,38 +47,34 @@ const Projects = ({ translations }: ProjectsProps) => {
       tech: ["Next.js 15", "React 19", "TypeScript", "Tailwind", "Prisma", "OpenAI", "Stripe"],
       live: "https://flow-insights.vercel.app",
       github: "#",
-      featured: true,
-      image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80"
+      image: "flowinsights.png"
     },
     {
       name: translations.projects.blitzscan.title,
       description: translations.projects.blitzscan.description,
       role: translations.projects.blitzscan.role,
       tech: ["React", "TypeScript", "Python", "Flask", "Supabase", "OpenAI"],
-      live: "#",
-      github: "#",
-      featured: true,
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80"
+      live: "https://blitz-scan-react-version.vercel.app",
+      github: "https://github.com/Alvaro-Calleros/Blitz-Scan-React-Version",
+      image: "blitzscan.png"
     },
     {
       name: translations.projects.mercart.title,
       description: translations.projects.mercart.description,
       role: translations.projects.mercart.role,
       tech: ["Node.js", "MongoDB", "React", "Express"],
-      live: "#",
-      github: "#",
-      featured: false,
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+      live: "https://mercartfront.vercel.app",
+      github: "https://github.com/WebDesignC/DevShop_Backend/tree/main",
+      image: "mercart.png"
     },
     {
       name: translations.projects.chess.title,
       description: translations.projects.chess.description,
       role: translations.projects.chess.role,
       tech: ["React", "Vite", "Node.js", "Express", "Stockfish", "TypeScript"],
-      live: "#",
-      github: "https://github.com/your-username/chess-review-api",
-      featured: false,
-      image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=800&q=80"
+      live: "https://alvaro-calleros.github.io/chess-game-review",
+      github: "https://github.com/Alvaro-Calleros/chess-review-api",
+      image: "chess-game-review.png"
     },
   ];
 
@@ -92,7 +88,7 @@ const Projects = ({ translations }: ProjectsProps) => {
           {translations.title}
         </h2>
 
-        <div className="grid gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => {
             const { ref: cardRef, isVisible: cardVisible } = useScrollReveal({ delay: index * 120 });
             
@@ -102,7 +98,7 @@ const Projects = ({ translations }: ProjectsProps) => {
                 ref={cardRef as any}
                 className={`overflow-hidden bg-gradient-to-br from-card to-muted/20 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-card scroll-reveal ${
                   cardVisible ? 'is-visible' : ''
-                } ${project.featured ? 'md:col-span-2 glow-effect' : ''}`}
+                }`}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
@@ -113,11 +109,6 @@ const Projects = ({ translations }: ProjectsProps) => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent transition-opacity duration-300 ${hoveredIndex === index ? 'opacity-95' : 'opacity-80'}`} />
-                {project.featured && (
-                  <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground shadow-glow z-10">
-                    Featured
-                  </Badge>
-                )}
               </div>
               <div className="p-8">
                 <div className="space-y-4">
