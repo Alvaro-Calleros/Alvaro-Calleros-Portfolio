@@ -136,15 +136,22 @@ All colors MUST be HSL.
   /* Custom Cursor */
   .custom-cursor {
     position: fixed;
-    width: 40px;
-    height: 40px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    background: hsl(var(--primary) / 0.15);
-    backdrop-filter: blur(8px);
+    background: radial-gradient(
+      circle,
+      hsl(var(--primary) / 0.25) 0%,
+      hsl(var(--primary) / 0.15) 30%,
+      hsl(var(--primary) / 0.05) 60%,
+      transparent 100%
+    );
+    backdrop-filter: blur(2px);
     pointer-events: none;
-    z-index: 9999;
+    z-index: 0;
     transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
     will-change: transform;
+    mix-blend-mode: screen;
   }
 
   @media (prefers-reduced-motion: reduce) {
