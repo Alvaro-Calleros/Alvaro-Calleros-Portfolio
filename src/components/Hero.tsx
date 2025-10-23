@@ -1,6 +1,5 @@
 import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
 import TypewriterText from "./TypewriterText";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
@@ -22,14 +21,11 @@ const Hero = ({ translations }: HeroProps) => {
     <section 
       id="home" 
       ref={heroRef as any}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(74, 0, 224, 0.7)), url(${heroBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background/95 to-primary/10"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+      {/* Gradient overlays for depth */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background/80" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-secondary/5" />
       
       <div className={`container relative z-10 mx-auto px-4 py-20 transition-all duration-700 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <div className="max-w-4xl mx-auto text-center space-y-8">

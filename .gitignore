@@ -15,6 +15,7 @@ commits.md*
 
 # Editor directories and files
 .vscode/*
+.md/*
 !.vscode/extensions.json
 .idea
 .DS_Store

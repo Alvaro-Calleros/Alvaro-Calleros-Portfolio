@@ -282,3 +282,33 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+.canvas-loader {
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: spin 1.1s infinite ease;
+  transform: translateZ(0);
+}
+
+.stars-canvas-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  0%, 100% {}
+  12.5% {}
+  25% {}
+  37.5% {}
+  50% {}
+  62.5% {}
+  75% {}
+  87.5% {}
+}
