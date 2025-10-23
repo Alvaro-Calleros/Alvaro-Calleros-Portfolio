@@ -2,6 +2,7 @@ import { Mail, Phone, MapPin, Github, Linkedin, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import EarthCanvas from "@/components/canvas/Earth";
 
 interface ContactProps {
   translations: {
@@ -20,8 +21,8 @@ const Contact = ({ translations }: ContactProps) => {
   const { ref: cardRef, isVisible: cardVisible } = useScrollReveal({ delay: 100 });
 
   return (
-    <section id="contact" className="py-20 px-4 bg-gradient-to-b from-background to-muted/20">
-      <div className="container mx-auto max-w-4xl">
+    <section id="contact" className="relative py-20 px-4 bg-gradient-to-b from-background to-muted/20 overflow-hidden">
+      <div className="container mx-auto max-w-6xl relative z-10">
         <h2 
           ref={titleRef as any}
           className={`text-4xl md:text-5xl font-bold text-center mb-8 gradient-text scroll-reveal ${titleVisible ? 'is-visible' : ''}`}
@@ -32,10 +33,19 @@ const Contact = ({ translations }: ContactProps) => {
           {translations.subtitle}
         </p>
 
-        <Card 
-          ref={cardRef as any}
-          className={`p-8 bg-gradient-to-br from-card to-muted/20 border-primary/20 mb-8 scroll-reveal ${cardVisible ? 'is-visible' : ''}`}
-        >
+        <div className="grid lg:grid-cols-2 gap-8 items-center mb-8">
+          {/* Earth 3D Model */}
+          <div 
+            className={`h-[400px] lg:h-[500px] rounded-2xl overflow-hidden transition-all duration-500 delay-200 ${cardVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+          >
+            <EarthCanvas />
+          </div>
+
+          {/* Contact Card */}
+          <Card 
+            ref={cardRef as any}
+            className={`p-8 bg-gradient-to-br from-card to-muted/20 border-primary/20 scroll-reveal ${cardVisible ? 'is-visible' : ''}`}
+          >
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <a 
               href="mailto:alvarocalleros44@gmail.com"
@@ -90,7 +100,8 @@ const Contact = ({ translations }: ContactProps) => {
               </Button>
             </div>
           </div>
-        </Card>
+          </Card>
+        </div>
 
         <p className="text-center text-muted-foreground text-sm">
           {translations.footer}
