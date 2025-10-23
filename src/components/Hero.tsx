@@ -90,7 +90,7 @@ const Hero = ({ translations }: HeroProps) => {
               className="border-primary text-primary hover:bg-primary/10"
               asChild
             >
-              <a href="/cv-placeholder.pdf" download>
+              <a href="/Resume.pdf" download="Alvaro-Calleros-Resume.pdf">
                 {translations.downloadCV}
               </a>
             </Button>
