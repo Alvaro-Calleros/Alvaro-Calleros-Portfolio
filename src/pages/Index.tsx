@@ -8,6 +8,7 @@ import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import CustomCursor from "@/components/CustomCursor";
 import FloatingBackground from "@/components/FloatingBackground";
+import StarsCanvas from "@/components/canvas/Stars";
 import { translations } from "@/translations";
 
 const Index = () => {
@@ -18,17 +19,20 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground relative">
       <CustomCursor />
       <FloatingBackground />
-      <Navigation
-        currentLang={language} 
-        onLanguageChange={(lang) => setLanguage(lang as "en" | "es" | "fr")}
-        translations={t.nav}
-      />
-      <Hero translations={t.hero} />
-      <About translations={t.about} />
-      <Projects translations={t.projects} />
-      <Skills translations={t.skills} />
-      <Experience translations={t.experience} />
-      <Contact translations={t.contact} />
+      <StarsCanvas />
+      <div className="relative z-10">
+        <Navigation
+          currentLang={language} 
+          onLanguageChange={(lang) => setLanguage(lang as "en" | "es" | "fr")}
+          translations={t.nav}
+        />
+        <Hero translations={t.hero} />
+        <About translations={t.about} />
+        <Projects translations={t.projects} />
+        <Skills translations={t.skills} />
+        <Experience translations={t.experience} />
+        <Contact translations={t.contact} />
+      </div>
     </div>
   );
 };
