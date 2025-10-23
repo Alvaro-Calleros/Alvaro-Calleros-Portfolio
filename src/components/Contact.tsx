@@ -81,7 +81,7 @@ const Contact = ({ translations }: ContactProps) => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground glow-effect w-full sm:w-auto"
               asChild
             >
-              <a href="/cv-placeholder.pdf" download>
+              <a href="/Resume.pdf" download="Alvaro-Calleros-Resume.pdf">
                 <Download className="w-5 h-5 mr-2" />
                 {translations.downloadCV}
               </a>
@@ -89,12 +89,12 @@ const Contact = ({ translations }: ContactProps) => {
 
             <div className="flex gap-4">
               <Button size="lg" variant="outline" className="border-primary" asChild>
-                <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/alvaro-calleros8" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-5 h-5" />
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-primary" asChild>
-                <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Alvaro-Calleros" target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5" />
                 </a>
               </Button>
