@@ -100,7 +100,7 @@ export const translations = {
           period: "Nov 2022 - Jun 2023",
           description: [
             "Managed enterprise data using SAP HANA, Eclipse, and advanced SQL",
-            "Designed and maintained databases for Coca-Cola Peru, improving data accessibility",
+            "Designed and maintained databases for a Beverage Company, improving data accessibility",
             "Wrote complex SQL queries for data analysis and reporting",
             "Worked with enterprise-level tools in production environments",
           ],
@@ -218,7 +218,7 @@ export const translations = {
           period: "Nov 2022 - Jun 2023",
           description: [
             "Gestioné datos empresariales usando SAP HANA, Eclipse y SQL avanzado",
-            "Diseñé y mantuve bases de datos para Coca-Cola Perú, mejorando la accesibilidad de datos",
+            "Diseñé y mantuve bases de datos para una empresa de bebidas, mejorando la accesibilidad de datos",
             "Escribí consultas SQL complejas para análisis y reportes de datos",
             "Trabajé con herramientas empresariales en entornos de producción",
           ],
@@ -336,7 +336,7 @@ export const translations = {
           period: "Nov 2022 - Juin 2023",
           description: [
             "Géré des données d'entreprise en utilisant SAP HANA, Eclipse et SQL avancé",
-            "Conçu et maintenu des bases de données pour Coca-Cola Pérou, améliorant l'accessibilité des données",
+            "Conçu et maintenu des bases de données pour une empresa de bebidas, améliorant l'accessibilité des données",
             "Écrit des requêtes SQL complexes pour l'analyse et les rapports de données",
             "Travaillé avec des outils d'entreprise dans des environnements de production",
           ],
